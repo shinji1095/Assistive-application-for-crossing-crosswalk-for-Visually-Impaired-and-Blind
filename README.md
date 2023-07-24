@@ -7,7 +7,8 @@
 PTCによって横断歩道への近さを確認し、近ければPSCによって歩行者用信号の色を確認します。歩行者用信号の色が赤→緑に変化するとIWLを用いてVIBの進行方向角度を推定します。これにより横断歩道をまっすぐ横断する補助を行います。
 
 # Requirements
-pass
+-   flutter_riverpod: ^1.0.3
+-   freezed_annotation: ^2.2.0
 
 # How to
 pass
