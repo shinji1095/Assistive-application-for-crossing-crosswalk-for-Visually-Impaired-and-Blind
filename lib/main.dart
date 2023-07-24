@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:app_a/view/take_picture.dart' as my_page;
-import 'package:app_a/view/homeView.dart' as hv;
-import 'pages/boxButtonPage.dart' as bb;
+
+import 'package:app_a/view/dobjView.dart' as dobjView;
+import 'package:app_a/view/captionView.dart' as captionView;
+import 'package:app_a/view/settingView.dart' as settingView;
+import 'pages/boxButtonPage.dart' as boxButtonPage;
 
 void main() => runApp(const ProviderScope(child: MyApp()));
 
@@ -26,7 +28,9 @@ class MyApp extends StatelessWidget{
       ),
       home: const _Home(),
       routes: <String, WidgetBuilder> {
-        '/caption': (context)=>const my_page.takePicturePage()
+        '/caption': (context) => captionView.CaptionView(),
+        '/dobj   ': (context) => dobjView.DObjView(),
+        '/setting' : (context) => settingView.SettingView()
       },
     );
 }
