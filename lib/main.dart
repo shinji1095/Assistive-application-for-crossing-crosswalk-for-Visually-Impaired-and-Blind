@@ -13,13 +13,7 @@ class _Home extends StatelessWidget{
   const _Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context)
-   => Scaffold(
-     appBar: AppBar(title: const Text('Assistive app for Visually Impaired on the crosswalk'),),
-     body: boxButtonPage.BoxButtonPage(
-       Text('tt'),
-       Text('dd')
-     )
-     );
+   => hv.HomeView();
 }
 
 class MyApp extends StatelessWidget{
