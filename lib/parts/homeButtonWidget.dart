@@ -8,19 +8,24 @@ class HomeButtonWidget extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         child: GestureDetector(
-          onTap: () => print('tap'),
+          onTap: (){
+            print('tap!');
+          },
           onHorizontalDragEnd: (details){
             if (details.primaryVelocity! > 5){
               print('swip right!');
+              Navigator.of(context).pushNamed('/dobj');
             }else
             if (details.primaryVelocity! < 5){
               print('swip left!');
+              Navigator.of(context).pushNamed('/caption');
             }
           },
 
           onVerticalDragEnd: (details){
             if (details.primaryVelocity! < 5){
               print('swip upper!');
+              Navigator.of(context).pushNamed('/setting');
             }else
             if (details.primaryVelocity! > 5){
               print('swip bottom!');
