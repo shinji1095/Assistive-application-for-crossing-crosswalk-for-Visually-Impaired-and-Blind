@@ -7,9 +7,12 @@ class HomeBoxWidget extends StatelessWidget {
       SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Image.asset('assets/icon.png'),
+        child: Center(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: Image.asset('assets/icon.png', fit: BoxFit.cover,),
           ),
+        )
+
       );
 }
