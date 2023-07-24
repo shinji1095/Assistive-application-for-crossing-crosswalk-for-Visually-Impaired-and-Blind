@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:app_a/view/take_picture.dart' as my_page;
+import 'package:app_a/view/homeView.dart' as hv;
 import 'pages/boxButtonPage.dart' as bb;
 
 void main() => runApp(const ProviderScope(child: MyApp()));
@@ -10,13 +11,7 @@ class _Home extends StatelessWidget{
   const _Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context)
-   => Scaffold(
-     appBar: AppBar(title: const Text('Assistive app for Visually Impaired on the crosswalk'),),
-     body: bb.BoxButtonPage(
-       Text('tt'),
-       Text('dd')
-     )
-     );
+   => hv.HomeView();
 }
 
 class MyApp extends StatelessWidget{
