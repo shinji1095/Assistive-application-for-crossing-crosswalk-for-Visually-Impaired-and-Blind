@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:app_a/view/dobjView.dart' as dobjView;
+import 'package:app_a/view/homeView.dart'    as homeView;
+import 'package:app_a/view/dobjView.dart'    as dobjView;
 import 'package:app_a/view/captionView.dart' as captionView;
 import 'package:app_a/view/settingView.dart' as settingView;
 import 'pages/boxButtonPage.dart' as boxButtonPage;
@@ -13,7 +14,7 @@ class _Home extends StatelessWidget{
   const _Home({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context)
-   => hv.HomeView();
+   => homeView.HomeView();
 }
 
 class MyApp extends StatelessWidget{
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget{
       ),
       home: const _Home(),
       routes: <String, WidgetBuilder> {
-        '/caption': (context) => captionView.CaptionView(),
-        '/dobj   ': (context) => dobjView.DObjView(),
+        '/caption':  (context) => captionView.CaptionView(),
+        '/dobj':     (context) => dobjView.DObjView(),
         '/setting' : (context) => settingView.SettingView()
       },
     );
