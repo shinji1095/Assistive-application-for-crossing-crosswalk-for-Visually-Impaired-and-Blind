@@ -38,6 +38,7 @@ dependencies:
   flutter_riverpod: ^1.0.3 # 追加
   freezed_annotation: ^2.2.0 # 追加
   camera: ^0.10.0+1
+  image: ^4.0.17
 
 dev_dependencies:
   flutter_test:
