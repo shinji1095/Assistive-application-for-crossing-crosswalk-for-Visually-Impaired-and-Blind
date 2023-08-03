@@ -4,11 +4,14 @@ import 'package:app_a/parts/dobjImageWidget.dart' as parts;
 import 'package:app_a/parts/dobjTextWidget.dart' as parts;
 
 class DObjView  extends StatelessWidget{
-  DObjView({Key? key}): super(key: key);
+  const DObjView({Key? key}): super(key: key);
   @override
   Widget build(BuildContext context)
-  => page.imageTextPage(
-      parts.DObjImageWidget(),
-      parts.DObjTextWidget()
+  => Scaffold(
+    appBar: AppBar(title: const Text('Assistive App for VIB'),),
+    body: page.imageTextPage(
+        parts.DObjImageWidget(),
+        const parts.DObjTextWidget()
+    ),
   );
 }

@@ -14,7 +14,7 @@ late List<CameraDescription> cameras;
 Future <void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
   cameras =await availableCameras();
-  runApp(ProviderScope(child: MyApp(cameras: cameras)) );
+  runApp(const ProviderScope(child: MyApp()) );
 }
 
 class _Home extends StatelessWidget{
@@ -25,8 +25,7 @@ class _Home extends StatelessWidget{
 }
 
 class MyApp extends StatelessWidget{
-  const MyApp({super.key, required this.cameras});
-  final List<CameraDescription> cameras;
+  const MyApp({super.key,});
 
   @override
   Widget build(BuildContext context)
