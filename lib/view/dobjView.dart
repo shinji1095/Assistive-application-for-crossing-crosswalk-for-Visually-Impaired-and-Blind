@@ -10,7 +10,7 @@ class DObjView  extends StatelessWidget{
   => Scaffold(
     appBar: AppBar(title: const Text('Assistive App for VIB'),),
     body: page.imageTextPage(
-        parts.DObjImageWidget(),
+        const parts.DObjImageWidget(),
         const parts.DObjTextWidget()
     ),
   );
