@@ -11,8 +11,8 @@ class HomeView extends StatelessWidget{
     => Scaffold(
       appBar: AppBar(title: const Text('Assistive App for VIB')),
       body:page.BoxButtonPage(
-        parts.HomeBoxWidget(),
-        parts.HomeButtonWidget()
+        const parts.HomeBoxWidget(),
+        const parts.HomeButtonWidget()
       )
     );
 }
