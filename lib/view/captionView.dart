@@ -4,11 +4,14 @@ import 'package:app_a/parts/captionImageWidget.dart' as parts;
 import 'package:app_a/parts/captionTextWidget.dart' as parts;
 
 class CaptionView  extends StatelessWidget{
-  CaptionView({Key? key}): super(key: key);
+  const CaptionView({Key? key}): super(key: key);
   @override
   Widget build(BuildContext context)
-  => page.imageTextPage(
-      parts.CaptionImageWidget(),
-      parts.CaptionTextWidget()
+  => Scaffold(
+    appBar: AppBar(title: const Text('Assistive App for VIB'),),
+    body: page.imageTextPage(
+        const parts.CaptionImageWidget(),
+        const parts.CaptionTextWidget()
+    ),
   );
 }

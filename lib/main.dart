@@ -10,6 +10,7 @@ import 'package:app_a/view/settingView.dart' as settingView;
 import 'pages/boxButtonPage.dart' as boxButtonPage;
 
 late List<CameraDescription> cameras;
+StateProvider<CameraDescription?> cameraProvider = StateProvider((ref) => null);
 
 Future <void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget{
       home: const _Home(),
       routes: <String, WidgetBuilder> {
         '/caption':  (context) => captionView.CaptionView(),
-        '/dobj':     (context) => dobjView.DObjView(),
+        '/dobj':     (context) => const dobjView.DObjView(),
         '/setting' : (context) => settingView.SettingView()
       },
     );
